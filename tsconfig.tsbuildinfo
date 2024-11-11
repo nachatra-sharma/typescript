@@ -1,1 +1,1 @@
-{"root":["./src/array.ts","./src/arrowFunctions.ts","./src/callbacks.ts","./src/function.ts","./src/implementingInterfaces.ts","./src/interfaces.ts","./src/number.ts","./src/return.ts","./src/type.ts","./src/typeInference.ts"],"version":"5.6.3"}
+{"root":["./src/array.ts","./src/arrowFunctions.ts","./src/callbacks.ts","./src/enum.ts","./src/function.ts","./src/generics.ts","./src/implementingInterfaces.ts","./src/interfaces.ts","./src/number.ts","./src/return.ts","./src/type.ts","./src/typeInference.ts"],"version":"5.6.3"}

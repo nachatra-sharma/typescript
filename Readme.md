@@ -118,3 +118,60 @@ const isLegalUser = ListOfUser.filter((user: User) => user.age > 18);
 
 console.log(isLegalUser);
 ```
+
+# Enums
+
+- Enums (short for enumerations) in TypeScript are a feature that allows you to define a set of named constants.
+- The concept behind an enumeration is to create a human-readable way to represent a set of constant values, which might otherwise be represented as numbers or strings
+
+```typescript
+enum Key {
+  up,
+  down,
+  left,
+  right,
+}
+
+function doSomething(pressed: Key) {
+  if (pressed === Key.down) {
+    console.log("up");
+  }
+}
+
+doSomething(Key.up);
+```
+
+# Generics
+
+- Generics are a language independent concept (exist in C++ as well)
+- Generics enable you to create components that work with any data type while still providing compile-time type safety.
+
+### issue without generics
+
+```typescript
+function return0(arr: string[] | number[]): string | number {
+  return arr[0];
+}
+
+const value1 = return0(["rishi", "harkirat"]);
+const value2 = return0([1, 43, 3]);
+
+console.log(value1, value2);
+
+// issue with this
+console.log(value1.toUpperCase()); // not working
+console.log(value1.toString().toUpperCase()); // working
+```
+
+### Solution with generics
+
+```typescript
+function sendData<T>(arr: T[]): T {
+  return arr[0];
+}
+
+const arr = ["harkirat", "singh"];
+
+const value1 = sendData<string>(arr);
+console.log(value1.toUpperCase());
+```
